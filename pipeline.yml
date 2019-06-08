@@ -1,0 +1,35 @@
+resources:
+  - name:       Git
+    type:       GitRepo
+    configuration:
+      gitProvider:  github-disha
+      repository:   github-disha
+      path:         dishameswania/project-examples
+    buildOn:
+      commit: true     
+
+pipeline:
+  - name: pipe1
+    steps:
+    - name: try1
+      type: bash
+      
+      triggeredBy:
+          resources:
+            - Git
+          steps:
+            - try1
+            
+      execution:
+          onStart:
+            - echo "Prepping build environment"
+          onExecution:
+            - echo "Executing step 1"
+          onSuccess:
+            - echo "Job well done!"
+          onFailure:
+            - echo "uh oh, something went wrong"
+          onComplete: #always
+            - echo "Cleaning up some stuff"
+          onCancel:
+            - echo "Someone cancelled the job."
