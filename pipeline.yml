@@ -4,7 +4,7 @@ resources:
     configuration:
       gitProvider:  github-disha
       repository:   github-disha
-      path:         dishameswania/project-examples
+      path:         dishameswania/ArtifactoryTest
     buildOn:
       commit: true     
 
@@ -12,13 +12,11 @@ pipeline:
   - name: pipe1
     steps:
     - name: try1
-      type: bash
+      type: Bash
       
       triggeredBy:
           resources:
             - Git
-          steps:
-            - try1
             
       execution:
           onStart:
