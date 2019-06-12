@@ -13,10 +13,6 @@ pipelines:
     steps:
     - name: try1
       type: Bash
-      
-      triggeredBy:
-          resources:
-            - Git
             
       execution:
           onExecute:
