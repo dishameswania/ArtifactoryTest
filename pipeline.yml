@@ -8,7 +8,7 @@ resources:
     buildOn:
       commit: true     
 
-pipeline:
+pipelines:
   - name: pipe1
     steps:
     - name: try1
@@ -19,9 +19,7 @@ pipeline:
             - Git
             
       execution:
-          onStart:
-            - echo "Prepping build environment"
-          onExecution:
+          onExecute:
             - echo "Executing step 1"
           onSuccess:
             - echo "Job well done!"
