@@ -4,24 +4,33 @@ resources:
     configuration:
       gitProvider:  git-disha
       repository:   git-disha
-      path:         dishameswania/ArtifactoryTest
+      path:         dishameswania/project-examples
     buildOn:
       commit: true     
 
 pipelines:
   - name: pipe1
     steps:
-    - name: try1
-      type: Bash
-            
-      execution:
-          onExecute:
-            - echo "Executing step 1"
+      - name: try2
+        type: MvnBuild
+        configuration:
+          #inherits from bash
+          mvnCommand:       mvn clean      # required
+          sourceLocation:   maven-example      # required
+          configLocation:   maven-example      # required
+          configFileName:   pom.xml      # required
+ 
+          integrations:
+            - name:         art-disha  # required
+          inputResources:
+            - name:         git-disha         # required
+ 
+        execution:
+          onStart:
+            - echo "Preparing for work..."
           onSuccess:
             - echo "Job well done!"
           onFailure:
             - echo "uh oh, something went wrong"
-          onComplete: #always
+          onComplete:                                  #always
             - echo "Cleaning up some stuff"
-          onCancel:
-            - echo "Someone cancelled the job."
