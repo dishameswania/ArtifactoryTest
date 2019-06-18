@@ -1,5 +1,5 @@
 resources:
-  - name:       Git1
+  - name:       Git2
     type:       GitRepo
     configuration:
       gitProvider:  git-disha
@@ -17,7 +17,7 @@ pipelines:
           #inherits from bash
           mvnCommand:       mvn clean      # required
           sourceLocation:   maven-example      # required
-          configLocation:   maven-example      # required
+          configFileLocation:   maven-example      # required
           configFileName:   pom.xml      # required
  
           integrations:
