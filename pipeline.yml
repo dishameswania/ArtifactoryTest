@@ -19,9 +19,7 @@ pipelines:
           sourceLocation:   maven-example      # required
           configFileLocation:   maven-example      # required
           configFileName:   pom.xml      # required
- 
-          integrations:
-            - name:         art-disha  # required
+
           inputResources:
             - name:         Git2         # required
  
