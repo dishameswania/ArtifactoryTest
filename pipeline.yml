@@ -14,6 +14,13 @@ pipelines:
       - name: try2
         type: MvnBuild
         configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - openjdk11
           #inherits from bash
           mvnCommand:       mvn clean      # required
           sourceLocation:   maven-example      # required
