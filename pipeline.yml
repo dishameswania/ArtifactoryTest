@@ -23,7 +23,7 @@ pipelines:
           integrations:
             - name:         art-disha  # required
           inputResources:
-            - name:         git-disha         # required
+            - name:         Git2         # required
  
         execution:
           onStart:
