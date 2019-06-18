@@ -21,7 +21,7 @@ pipelines:
           configFileName:   pom.xml      # required
           
           integrations:
-            - name:         art-disha
+            - name:         artdisha
           inputResources:
             - name:         Git2         # required
  
