@@ -2,8 +2,8 @@ resources:
   - name:       Git1
     type:       GitRepo
     configuration:
-      gitProvider:  github-disha
-      repository:   github-disha
+      gitProvider:  git-disha
+      repository:   git-disha
       path:         dishameswania/ArtifactoryTest
     buildOn:
       commit: true     
