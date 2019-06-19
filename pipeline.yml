@@ -47,8 +47,6 @@ pipelines:
       - name: publish
         type: PublishBuildInfo
         configuration:
-          integrations:
-            - name: artdisha
           inputSteps:
             - name: try2
           outputResources:
