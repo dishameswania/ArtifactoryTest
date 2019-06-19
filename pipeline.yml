@@ -50,7 +50,6 @@ pipelines:
             - echo "uh oh, something went wrong"
           onComplete:                                  #always
             - echo "Cleaning up some stuff"
-            
       - name: publish
         type: PublishBuildInfo
         configuration:
