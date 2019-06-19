@@ -50,6 +50,6 @@ pipelines:
           integrations:
             - name: artdisha
           inputSteps:
-            - name: build_mvn
+            - name: try2
           outputResources:
             - name: build_info
