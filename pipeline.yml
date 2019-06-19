@@ -22,8 +22,8 @@ pipelines:
         type: MvnBuild
         configuration:
           #inherits from bash
-          mvnCommand:       clean install -f ./pom.xml      # required
           sourceLocation:   ./maven-example      # required
+          mvnCommand:       clean install -f ./pom.xml      # required
           configFileLocation:   .      # required
           configFileName:   mvnArtConfig      # required
           
