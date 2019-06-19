@@ -44,12 +44,6 @@ pipelines:
             - popd
             - javac -version
             - mvn --version
-          onSuccess:
-            - echo "Job well done!"
-          onFailure:
-            - echo "uh oh, something went wrong"
-          onComplete:                                  #always
-            - echo "Cleaning up some stuff"
       - name: publish
         type: PublishBuildInfo
         configuration:
