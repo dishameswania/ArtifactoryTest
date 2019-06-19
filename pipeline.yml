@@ -22,7 +22,7 @@ pipelines:
         type: MvnBuild
         configuration:
           #inherits from bash
-          sourceLocation:   ./artifactory-maven-plugin-example      # required
+          sourceLocation:   artifactory-maven-plugin-example      # required
           mvnCommand:       clean install -f ./pom.xml      # required
           configFileLocation:   .      # required
           configFileName:   mvnArtConfig      # required
