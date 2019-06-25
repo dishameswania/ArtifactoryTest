@@ -9,8 +9,8 @@ resources:
   - name:       Git2
     type:       GitRepo
     configuration:
-      gitProvider:  git-disha
-      repository:   git-disha
+      gitProvider:  github-disha
+      repository:   github-disha
       path:         dishameswania/project-examples
     buildOn:
       commit: true     
