@@ -30,8 +30,9 @@ pipelines:
             type: image
             image:
               custom:
-                name: pipelines-docker.jfrog.io/jfrog/pipelines-u16java
-                tag: 0.9.0
+                name: drydock/u16java
+                tag: master
+         
           integrations:
             - name:         artdisha
           inputResources:
