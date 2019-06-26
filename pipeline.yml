@@ -41,8 +41,7 @@ pipelines:
         execution:
           onStart:
             - echo "Starting execution"
-            - _set_jdk openjdk8
-            - javac -v
+            - javac -version
           
       - name: publish
         type: PublishBuildInfo
