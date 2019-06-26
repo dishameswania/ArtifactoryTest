@@ -5,6 +5,13 @@ resources:
       registry: dockerhub
       imageName: nginx
       imageTag: latest
+  - name: docker_image
+    type: Image
+    configuration:
+      registry: Art1
+      sourceRepository: docker
+      imageName: 35.240.195.241:8081/docker/busybox
+      imageTag: latest
   - name: dockerbuild_repo
     type: GitRepo
     configuration:
@@ -36,7 +43,7 @@ pipelines:
             - name: dockerbuild_repo
             #- name:
             - name: files
-            - name: dh_image
+            - name: docker_image
           integrations:
             - name: artdisha
       - name: push_docker_image
