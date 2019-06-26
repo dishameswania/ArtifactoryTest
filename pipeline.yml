@@ -58,7 +58,7 @@ pipelines:
         type: PublishBuildInfo
         configuration:
          # integrations:
-          #  - name: Art1
+          #  - name: Art1.
           inputSteps:
             - name: push_docker_image
           outputResources:
