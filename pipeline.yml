@@ -29,6 +29,9 @@ pipelines:
           runtime:
             type: image
             image:
+              auto:
+                language: java
+                versions: openjdk11
               custom:
                 name: drydock/u16java
                 tag: master
