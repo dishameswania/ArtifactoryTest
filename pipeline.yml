@@ -29,11 +29,8 @@ pipelines:
           runtime:
             type: image
             image:
-              auto:
-                language: java
-                versions: ["openjdk11"]
               custom:
-                name: drydock/u16java
+                name: drydock/u18java
                 tag: master
          
           integrations:
@@ -44,7 +41,7 @@ pipelines:
         execution:
           onStart:
             - echo "Starting execution"
-            - java -v
+            - javac -v
           
       - name: publish
         type: PublishBuildInfo
