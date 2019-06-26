@@ -9,7 +9,7 @@ resources:
     type: GitRepo
     configuration:
       path: dishameswania/ArtifactoryTest
-      gitProvider: githu-disha
+      gitProvider: github-disha
   - name: docker_build_info
     type: BuildInfo
     configuration:
