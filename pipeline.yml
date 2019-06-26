@@ -46,20 +46,12 @@ pipelines:
             - name: dh_image
           integrations:
             - name: artdisha
-      - name: push_docker_image
-        type: DockerPush
-        configuration:
-          targetRepository: docker
-          integrations:
-            - name: artdisha
-          inputSteps:
-            - name: build_docker
       - name: publish_docker_build
         type: PublishBuildInfo
         configuration:
          # integrations:
           #  - name: Art1.
           inputSteps:
-            - name: push_docker_image
+            - name: build_docker
           outputResources:
             - name: docker_build_info
