@@ -42,8 +42,7 @@ pipelines:
           onStart:
             - echo "Starting execution"
             - java -v
-          onExecute:
-            - java -v
+          
       - name: publish
         type: PublishBuildInfo
         configuration:
