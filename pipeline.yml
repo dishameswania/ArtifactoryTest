@@ -43,7 +43,7 @@ pipelines:
             - name: dockerbuild_repo
             #- name:
             - name: files
-            #- name: docker_image
+            - name: dh_image
           integrations:
             - name: artdisha
       - name: push_docker_image
