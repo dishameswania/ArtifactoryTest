@@ -31,7 +31,7 @@ pipelines:
         configuration:
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: '35.240.195.241:8081/docker/disha'
+          dockerImageName: '35.240.195.241:8081/docker/disha/'
           dockerImageTag: $pipeline_name.$run_number
           inputResources:
             - name: dockerbuild_repo
